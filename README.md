@@ -32,8 +32,8 @@ Crear (POST)
 
 -El resultado del endpoint antes mencionado se puede ver en las siguientes imagenes.
 
-<img src="img/crear.png" alt="collection" width="300"/>
-<img src="img/emailExists.png" alt="collection" width="300"/>
-<img src="img/password.png" alt="collection" width="300"/>
-<img src="img/email.png" alt="collection" width="300"/>
+<img src="img/crear.png" alt="collection" width="1000"/>
+<img src="img/emailExists.png" alt="collection" width="1000"/>
+<img src="img/password.png" alt="collection" width="1000"/>
+<img src="img/email.png" alt="collection" width="1000"/>
 
