@@ -31,7 +31,7 @@ public final class FakeUser {
         final UserCommand.Create user = new UserCommand.Create();
         user.setName("Luis Suarez");
         user.setPassword("password");
-        user.setEmail("lsuarez@gmail.com");
+        user.setEmail("lsuarez@gmail213.com");
         user.setPhones(List.of(phone));
         
         return user;

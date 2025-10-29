@@ -17,8 +17,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
@@ -26,6 +29,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 
 @SpringBootTest
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @ContextConfiguration(classes = Application.class)
 @TestPropertySource("classpath:application.properties")
 @ActiveProfiles("test")
@@ -65,6 +69,7 @@ public class UserPersistenceTest {
     }
  
     @Test
+    @Order(1)
     public void testFinByUserName() {
         
         User finByUserName = userRepository.finByUserName(user.getEmail());
@@ -73,7 +78,20 @@ public class UserPersistenceTest {
         assertEquals(user.getEmail(), finByUserName.getEmail());
     }
 
+
     @Test
+    @Order(2)
+    public void testFinByEmail() {
+        
+        Optional<User> found = userRepository.finByEmail(user.getEmail());
+        
+        assertTrue(found.isPresent());
+        assertEquals(FakeUser.userCreate().getEmail(), found.get().getEmail());
+        
+    }
+    
+    @Test
+    @Order(3)
     public void testCreate() {
         
         UserCommand.Create userCommandCreate = FakeUser.userCommandCreate();
@@ -82,16 +100,6 @@ public class UserPersistenceTest {
         
         assertThat(create, notNullValue());
         assertThat(create.token(), notNullValue());
-    }
-
-    @Test
-    public void testFinByEmail() {
-        
-        Optional<User> found = userRepository.finByEmail(user.getEmail());
-        
-        assertTrue(found.isPresent());
-        assertEquals(FakeUser.userCreate().getEmail(), found.get().getEmail());
-        
     }
     
 }
