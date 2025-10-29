@@ -30,15 +30,19 @@ Por defector la url y puerto del proyecto son: http/localhost:8080/user-service/
 Crear (POST)
 > /v1/user
 
--El resultado del endpoint antes mencionado se puede ver en las siguientes imagenes.
+### El resultado del endpoint antes mencionado se puede ver en las siguientes imagenes.
 
 <img src="img/crear.png" alt="collection" width="1000"/>
 <img src="img/emailExists.png" alt="collection" width="1000"/>
 <img src="img/password.png" alt="collection" width="1000"/>
 <img src="img/email.png" alt="collection" width="1000"/>
 
+### Visualización de Swagger
 
-# Diagrama de Procesos - Creación de Usuario
+<img src="img/swagger.png" alt="collection" width="1000"/>
+
+
+### Diagrama de Procesos - Creación de Usuario
 
 <img src="img/diagrama.svg" alt="collection" width="1000"/>
 
