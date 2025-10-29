@@ -28,7 +28,7 @@ Por defector la url y puerto del proyecto son: http/localhost:8080/user-service/
 - Crear Usuario:
 
 Crear (POST)
-> /v1/user
+> /user-service/api/v1/user
 
 ### El resultado del endpoint antes mencionado se puede ver en las siguientes imagenes.
 
