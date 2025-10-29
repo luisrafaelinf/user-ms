@@ -37,3 +37,10 @@ Crear (POST)
 <img src="img/password.png" alt="collection" width="300"/>
 <img src="img/email.png" alt="collection" width="300"/>
 
+
+# Diagrama de Procesos - Creación de Usuario
+
+<img src="img/diagrama.svg" alt="collection" width="1000"/>
+
+
+
